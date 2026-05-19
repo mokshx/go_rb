@@ -14,7 +14,7 @@ var DB *sql.DB
 
 func main() {
 	fmt.Println("Hello, World!")
-	
+
 	err := godotenv.Load()
 	if err != nil {
 		log.Println("Error loading .env file")
@@ -24,6 +24,10 @@ func main() {
 	if err != nil {
 		log.Fatal("Env conf error", err)
 	}
-	DB, _ = db.InitDB(myconf)
+	DB, err = db.InitDB(myconf)
+	if err != nil {
+		log.Fatal("DB could not connect")
+	}
+	defer DB.Close()
 
 }
