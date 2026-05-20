@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"gorb/config"
 	"gorb/db"
+	"gorb/rb"
 	"log"
 
 	"github.com/joho/godotenv"
@@ -29,5 +30,13 @@ func main() {
 		log.Fatal("DB could not connect")
 	}
 	defer DB.Close()
+
+	app := rb.App{
+		DB: DB,
+	}
+
+	app.CreateSearchPackage(rb.RbRequest{
+		OrderId: "384788",
+	})
 
 }
