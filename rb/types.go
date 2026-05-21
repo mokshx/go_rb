@@ -144,3 +144,97 @@ type OrderPropertyData struct {
 	UserStatus              sql.NullInt64  `db:"User_Status"`
 	YearsRequired           sql.NullInt64  `db:"Years_Required"`
 }
+
+type DocumentType struct {
+	Id         int    `db:"Id"`
+	Type       string `db:"Type"`
+	TypeStatus bool   `db:"Type_Status"`
+}
+
+type TaxType struct {
+	Id         int    `db:"Id"`
+	SourceType string `db:"Source_Type"`
+	TypeStatus bool   `db:"Source_Type_Status"`
+}
+
+type TaxPaidStatus struct {
+	Id         int    `db:"Id"`
+	StatusType string `db:"Status_Type"`
+	Status     bool   `db:"Status"`
+}
+
+type RbSectionTypeMaps struct {
+	docTypesMap         map[int]DocumentType
+	taxSourcesMap       map[int]TaxType
+	taxPaidStatusMap    map[int]TaxPaidStatus
+	chainTypesMap       map[int]ChainInstrumentType
+	lienTypesMap        map[int]LienJudgementType
+	partyEntitiesMap    map[int]PartyEntities
+	secInstEntitiesMap  map[int]SecurityInstrumentsType
+	eraEntitiesMap      map[int]ERAEntities
+	taxEntitiesMap      map[int]TaxEntities
+	chainEntitiesMap    map[int]ChainOfTitleEntities
+	lienEntitesMap      map[int]LienJudgementEntities
+	taxAuthorityTypeMap map[int]TaxAuthorityType
+	interestTypeMap     map[int]PropertyInterestType
+}
+
+type ChainInstrumentType struct {
+	Id     int    `db:"Id"`
+	Type   string `db:"Type"`
+	TypeId int    `db:"Type_ID"`
+	Status bool   `db:"Status"`
+}
+
+type LienJudgementType struct {
+	Id     int    `db:"Id"`
+	Type   string `db:"Type"`
+	TypeId int    `db:"Type_ID"`
+	Status bool   `db:"Status"`
+}
+
+type PartyEntities struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type SecurityInstrumentsType struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type ERAEntities struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type TaxEntities struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type ChainOfTitleEntities struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type LienJudgementEntities struct {
+	Id           int    `db:"Id"`
+	Entity       string `db:"Entity"`
+	EntityStatus bool   `db:"Entity_Status"`
+}
+
+type TaxAuthorityType struct {
+	Id   int    `db:"Id"`
+	Name string `db:"Name"`
+}
+
+type PropertyInterestType struct {
+	Id               int    `db:"Id"`
+	InterestTypeName string `db:"Interest_Type_Name"`
+}
