@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- <script defer src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script> -->
+  <script defer src="https://titles-server-polyfill-940452134054.us-central1.run.app"></script>
+  <style type="text/css" media="print">
+    @media print {
+      @page{
+       margin-bottom: 110px;
+       margin-left: 50px;
+       margin-right: 50px;
+       margin-top: 50px;
+       padding-top: 50px;
+      @bottom-right{
+        margin-right: 10px;
+        content:'PAGE ' counter(page) ' of ' counter(pages);
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 10px;
+      }
+      html,
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        margin: 10px 15px 10px 15px;
+      }
+
+      .w-20{
+        width: 20%;
+        float: left;
+      }
+
+      .w-25{
+        width: 25%;
+        float: left;
+      }
+
+      .w-33{
+        width: 33%;
+        float: left;
+      }
+
+      .w-34{
+        width: 34%;
+        float: left;
+      }
+
+      .w-50{
+        width: 50%;
+        float: left;
+      }
+
+      .w-93{
+        width: 93%;
+        float: left;
+      }
+
+      .w-96{
+        width: 96%;
+        float: left;
+      }
+
+      .w-99{
+        width: 99%;
+        float: left;
+      }
+
+      .w-100{
+        width: 100%;
+      }
+
+      .d-flex-between {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      .sp-partition {
+        border-bottom: 2px solid #e5e5e5;
+        margin: 0 -7.4px 0 -7.5px;
+      }
+
+      .sp-gen-comments {
+        border-bottom: 2px solid #e5e5e5;
+        height: 0px;
+        margin: 0 -7.4px 8px -7.5px;
+      }
+
+      .sp-line {
+        border-bottom: 2px solid #e5e5e5;
+        height: 0px;
+        margin: 0 -7.4px -8px -7.5px;
+        padding-top: 10px;
+      }
+
+      .sp-title {
+        font-size: 24.29px !important;
+        font-weight: 700;
+        color: #0C111F;
+        line-height: 30px;
+      }
+
+      .sp-prod {
+        color: #EF4651;
+        font-size: 22.33px !important;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        line-height: 14px;
+      }
+
+      .sp-eff-logo{
+        position: absolute;
+        top: 0px;
+        right: 0.5rem;
+      }
+
+      .sp-eff-date{
+        position: absolute;
+        top: 4rem;
+        left: 2.1rem;
+        color: #EF4651;
+        font-weight: 700;
+        font-size: 9px;
+      }
+
+      .sp-hdr2-logo{
+        position: fixed;
+        top: 10;
+      }
+
+      .sp-hdr2-order{
+        position: fixed;
+        top: 10;
+      }
+
+      .sp-highlight {
+        color: #EE4751;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 13px;
+      }
+
+      .sp-bold {
+        font-weight: 700 !important;
+      }
+
+      .sp-ftr-txt {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 10px;
+        display: flex;
+        align-items: center;
+        padding-top: 2px;
+      }
+
+      .sp-label {
+        font-family: "Poppins", sans-serif;
+        font-size: 11px;
+        color: #878F97;
+        font-weight: 400;
+        line-height: 12px;
+        padding-right: 10px;
+      }
+
+      .sp-info {
+        font-family: "Poppins", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color:#10162B;
+        line-height: 13px;
+        word-break: break-word;
+        padding-right: 10px;
+      }
+
+      .sub-text{
+        margin-top: -1px;
+        font-size: 80%;
+      }
+
+      .sp-info .sub-text{
+        font-weight: normal !important;
+      }
+
+      .sp-info-normal {
+        font-family: "Poppins", sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        color:#10162B;
+        line-height: 13px;
+        word-break: break-word;
+      }
+
+      .sp-sec-title {
+        background-color: #10162B;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.014px;
+        padding: 2px 8px;
+      }
+
+      .sp-subsec-title {
+        color: #878F97;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+      }
+
+      .sp-no-break {
+        display: block;
+        page-break-inside: avoid;
+      }
+
+      .sp-gmap {
+        margin-top: -50px;
+        border: 2px solid #10162B;
+      }
+
+      .sp-section {
+        background-color: #F5FCFF;
+        border: 2px solid #10162B;
+        margin-top: 1rem;
+        box-decoration-break: clone;
+      }
+
+      .sp-section-items {
+        padding: 8px 8px;
+      }
+
+      .sp-annot {
+        color:inherit !important;
+      }
+
+      .sp-td-top {
+        vertical-align: top;
+      }
+
+      .endOfReport {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+        padding: 15px 0px;
+      }
+
+      .disclaimerTxt {
+        color: #10162B;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        padding-top: 15px;
+      }
+
+      .disclaimerTxt a {
+        cursor: pointer;
+      }
+
+      thead {display: table-header-group;} 
+      tfoot {display: table-footer-group;}
+
+      .page-header-space {
+        height: 50px;
+      }
+
+      .page-footer-space {
+        height: 56px;
+      }
+
+      .pgHdr1 {
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        opacity: 0;
+      }
+
+      #mainHdr:nth-of-type(1) {
+        background: white;
+        opacity: 1;
+      }
+
+      .pgFtr {
+        position: fixed;
+        bottom: 50px;
+        left: 50px;
+        right: 8px;
+        width: 90%;
+      }
+
+      .pghdr {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        right: 8px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+        justify-content: space-between;
+      }
+      .row-space{
+        border-collapse: separate;border-spacing: 0 5px;
+      }
+
+      .clearfix{
+        padding-top: 5px;
+      }
+      
+      .address {
+     white-space: pre-line;
+      }
+
+      .pr-5{
+  padding-right: 5px;
+}
+
+.pr-0{
+  padding-right: 0px;
+}
+
+.pb-5{
+  padding-bottom: 5px;
+}
+
+    }
+    }
+  </style>
+</head>
+
+<body>
+  
+
+ 
+
+  <table class="w-100">
+    <thead  class="w-100">
+      <div style="position: fixed;">
+      <div class="pghdr">
+        <div style="display: flex;flex-direction: column;">
+          <div><img src="<%= orders.custlogo %>" height="35"></div>
+          <div ><img src="<%= orders.pippinreport %>" height="16"></div>
+        </div>
+       
+        <div style="display: flex;align-items: flex-end;display: flex;flex-direction: column;">
+          <div class="text-right pb-1" style="display: flex;flex-direction: row;">
+            <span class="sp-label pr-5">Order:</span> 
+            <span class="sp-info pr-5"><%= reportData.File_ID %></span>
+            <span class="sp-label pr-0">(<%= reportData.Order_ID %>)</span>
+          </div>
+          <% if (reportData.completeAddress) { %>
+          <div class="sp-highlight text-right">
+            <span class="address" style="line-height: 18px;"><%= reportData.completeAddress %></span>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+          <div  class="pghdr" style="background-color: white;position: absolute;top: -50px;width: 100%;left: 0px;">
+            <div style="display: flex;flex-direction: column;background-color: white;">
+            <div><img src="<%= orders.custlogo %>" height="28" /></div>
+            <div class="py-1"><img src="<%= orders.pippinreport %>" height="48" /></div>
+            <div class="sp-prod mt-1"><%= reportData.Product_Description %></div>
+            <div class="mt-1">
+              <span class="sp-label"> Order: </span>
+              <span class="sp-info"><%= reportData.File_ID %></span>
+              <span class="sp-label">&nbsp;(<%= reportData.Order_ID %>)</span>
+            </div>
+            </div>
+            <div class="sp-eff-logo">
+              <img src="<%= orders.effectiveLogo %>" width="122" height="122" />
+              <div class="sp-eff-date">
+                <% if (orders.Report.ReportDetails.Effective_Date !=null) { %>
+                <%= orders.effectiveDate  %>
+                <% } else { %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A<% } %>
+              </div>
+            </div>
+          </div>
+      
+    </thead>
+  
+    <tbody  class="w-100">
+      <tr>
+        <td>
+          <div style="padding-top: 75px;">
+            <div>
+             
+              <% if (orders.Report.ReportDetails.Report_Notes && orders.Report.ReportDetails.Report_Notes.trim()) { %>
+                <div class="mt-4" style="display: flex;">              
+                  <span class="sp-label"> Notes: </span>              
+                  <p class="sp-info">
+                    <% let Report_Notes = 
+                    orders.Report.ReportDetails.Report_Notes.split("\n"); %>
+                    <% Report_Notes.forEach((rec,i)=>{ %>
+                      <% if(rec){ %>
+                        <%= rec %><br>
+                      <% } else { %>
+                        <br>
+                      <% } %>
+                    <% }) %>  
+                  </p>   
+                </div>
+                <% } %>
+              <div>
+                <span class="sp-label">Search Date</span> 
+                <span class="sp-info"><%= orders.searchDate %></span>
+                <%  if (reportData.Product_Description && reportData.Product_Description.trim().toLowerCase() == "update search") { %>
+                  <span class="sp-label"> Prior Effective Date</span>
+                  <span class="sp-info">
+                    <%  if (orders.Report.ReportDetails.Prior_Effective_Date != null) { %>
+                      <%= orders.priorEffectiveDate %>
+                    <%  } else { %> N/A <%  } %>
+                  </span>
+                  <%  } else { %>
+                  <span class="sp-label"> Yrs Searched</span>
+                  <span class="sp-info">
+                    <%  if (orders.Report.ReportDetails.Years_Searched != null) { %>
+                    <%=  orders.yrsSearch %>  (<%= orders.searchStartDate %>)
+                    <%  } else { %> N/A <%  } %>
+                    </span>
+                <%  } %>
+              </div>
+          
+              <div class="sp-section">
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Property_Details.propDocPresent){ %>
+                    <a href="PRT_DT-T" class = "sp-annot">Property</a>
+                  <% } else if (orders.Report.Property_Details.hasOwnProperty('propDocAttachments')){ %>
+                    <a href="<%= orders.Report.Property_Details.propDocAttachments %>" target="_blank" class = "sp-annot">Property</a>
+                  <% } else { %>
+                    Property
+                  <% } %>
+                </div>
+
+                <div class="sp-section-items pt-1" style="min-height: 140px;">
+                  <table class="w-100">
+
+                    <tr style="justify-content: start;display: flex;">
+                      <td style="width: 60%;">
+                        <table style="width: 100%;" class="row-space">
+                        <tr style="height: 0px;">
+                          <td style="width:20%;"></td>
+                          <td style="width:41%;"></td>
+                          <td style="width:39%;"></td>
+                        </tr>
+                      <% if (reportData.completeAddress) { %>
+                      <tr>
+                        <td class="sp-label sp-td-top">Address</td>
+                        <td class="sp-highlight address"><%= reportData.completeAddress %></td>
+                        <td></td>
+                      </tr>
+                      <% } %>
+                      <tr>
+                        <td class="sp-label">County</td>
+                        <td class="sp-info">
+                          <span class="text-capitalize">
+                            <%= reportData.Property_County.toLowerCase() %>
+                          </span>,&nbsp;<%= reportData.Property_State_Abbr %>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td class="sp-label sp-td-top">Parcel</td>
+                        <td class="sp-info"><%= orders.Report.Property_Details.ParcelText %></td>
+                        <td></td>
+                      </tr>
+                      <% if (orders.Report.Property_Details.PUD
+                      && orders.Report.Property_Details.Development_Name) { %>
+                        <tr>
+                          <td class="sp-label sp-td-top">PUD</td>
+                          <td class="sp-info">
+                            <% let Development_Name = 
+                            orders.Report.Property_Details.Development_Name.split("\n"); %>
+                            <% Development_Name.forEach((rec,i)=>{ %>
+                              <% if(rec){ %><%= rec %><br><% } else { %>
+                                <br>
+                              <% } %>
+                            <% }) %>
+                          </td>
+                          <td></td>
+                        </tr>
+                      <% } %>
+                      <% if (orders.Report.Property_Details.Mobile_Home) { %>
+                        <tr>
+                          <td class="sp-label">Mobile Home</td>
+                          <td class="sp-info">Yes</td>
+                          <td></td>
+                        </tr>
+                      <% } %>
+                      <% if (orders.Report.Property_Details.Interest_Type_Id) { %>
+                        <tr>
+                          <td class="sp-label" valign="top">Estate Type</td>
+                          <td colspan="2" valign="top" class="sp-info">
+                            <label>
+                              <%= orders.Report.Property_Details.estateLabel %>
+                            </label>
+                            <% if (orders.Report.Property_Details.Interest_Type_Id  != 1) { %>
+                            </br>
+                            <label class="sub-text">
+                              <% if(orders.Report.Property_Details.Est_Comments && orders.Report.Property_Details.Est_Comments.trim()){ %>
+                                <%= orders.Report.Property_Details.Est_Comments %>
+                              <% } else { %>
+                                  N/A
+                              <% } %>
+                            </label> 
+                            <% } %>
+                          </td>
+                        </tr>
+                      <% } %>
+                      <% if (orders.owners && orders.owners.length > 0) { %>
+                        <tr>
+                          <td class="sp-label sp-td-top">
+                            <% if (orders.owners.length > 1) { %> Owners
+                            <% } else {%> Owner <% } %>
+                          </td>
+                          <td class="sp-info"> <%= orders.owners %></td>
+                          <td></td>
+                        </tr>
+                      <% } %>
+                        </table>
+                      
+                      </td>
+
+                      <td style="display: flex;justify-content: start;width: 40%;">     
+                          <img src="<%= orders.googleMapImageSecond %>"  width="270" height="170" class="sp-gmap" />
+                      </td>
+
+                </tr>
+
+              
+                  </table>
+
+                  <div class="row-space">
+                    <% if (orders.Report.Property_Details.Legal_Description) { %>
+                      <div class="sp-label clearfix">Legal Description</div>
+                      <div class="sp-info clearfix">
+                        <% 
+                        let Legal_Description = orders.Report.Property_Details.Legal_Description.split('\n');
+                        Legal_Description.forEach((rec, i) => {
+                          if (rec.trim()) {
+                        %>
+                            <div><%= rec %></div>
+                        <%   } else { %>
+                            <br> 
+                        <%   }
+                        }); %>
+                      </div>
+                    <% } %>
+                    <% if (orders.Report.Property_Details.Comments) { %>
+                        <div class="sp-label clearfix">Comments</div>
+                        <div class="sp-info clearfix">
+                          <% let Comments = 
+                          orders.Report.Property_Details.Comments.split('\n'); 
+                          %>
+                          <% Comments.forEach((rec,i)=>{ %>
+                            <% if(rec.trim()){ %>
+                              <div><%= rec %></div>
+                            <% } else { %>
+                              <br> 
+                            <% } %>
+                          <% }) %>
+                        </div>
+  
+                    <% } %>
+                    </div>
+                </div>
+              </div>
+          
+            </div>
+
+            <% if (orders.Report.Search_Parties.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.Search_Parties.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <% if (index==0 ) { %> 
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Search_Parties[0].titleDocPresent){ %>
+                    <a href="SRC_PT-T" class = "sp-annot">Search Parties</a>
+                  <% } else { %>
+                    Search Parties
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                  if (orders.Report.General_Comments.length> 0) { 
+                  orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                  if (genCmt.Comments_Type_ID == 1 && genCmt.Comments && 
+                  genCmt.Comments.trim() ) { %>
+                  <div class="sp-label">General Comments</div>
+                  <div class="sp-info">
+                  <% let Comments = genCmt.Comments.split("\n"); 
+                    Comments.forEach((rec,i)=>{ 
+                      if(rec){ %>
+                      <%= rec %><br>
+                      <% } else { %>
+                        <br>
+                      <% }  
+                    }) %>
+                  </div>
+                  <div class="sp-gen-comments"></div>
+                  <% } 
+                  }) 
+                  } %>
+                  <div class="clearfix">
+                    <div class="w-50 sp-label">Name</div>
+                    <div class="w-50 sp-label">Relationship</div>
+                  </div> 
+                  <div class="clearfix sp-gen-comments"></div>
+                  <% } %>
+                  <div class="clearfix">
+                    <div class="w-50 sp-info">
+                      <% if (order.docPresent){ %>
+                        <a href="SRC_PT-<%= index %>" class = "sp-annot"><%= order.spName %></a>
+                      <% }else if (order.hasOwnProperty('attachments')){ %>
+                        <a href="<%= order.attachments %>" class = "sp-annot"><%= order.spName %></a>
+                      <% } else { %>
+                        <%= order.spName %>
+                      <% } %>
+                    </div>
+                    <div class="w-50 sp-info"><%= order.Entity_Label %>
+                      <% if (order.Is_Current_Owner == 1){ %><span class="sp-info">(Current)</span> <% } %>
+                    </div>
+                  </div>
+                  <% if (order.spAlias && order.spAlias.trim()) { %>
+                    <div class="sp-label">
+                      <%= order.spAlias %>
+                    </div>
+                  <% } %>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% }  
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.Search_Parties.length - 1 ) { %> 
+                    <div class="sp-line">
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 1 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Search Parties
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.Assessments.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.Assessments.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Assessments[0].titleDocPresent){ %>
+                    <a href="ASS_NS-T" class = "sp-annot">Assessment</a>
+                  <% } else { %>
+                    Assessment
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                    if (orders.Report.General_Comments.length> 0) { 
+                    orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                      if (genCmt.Comments_Type_ID == 2 && genCmt.Comments && 
+                      genCmt.Comments.trim() ) { %>
+                    <div class="sp-label">General Comments</div>
+                    <div class="sp-info">
+                    <% let Comments = genCmt.Comments.split("\n"); 
+                      Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                        <%= rec %><br>
+                        <% } else { %>
+                          <br>
+                        <% } 
+                      }) %>
+                    </div>
+                    <div class="sp-gen-comments"></div>
+                  <% } 
+                  }) 
+                  }
+                  } %>
+                      
+                  <div class="clearfix">
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="ASS_NS-<%= index %>" class = "sp-annot">
+                            <%= order.Year %></a>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot"><%= order.Year %></a>
+                        <% } else { %>
+                          <%= order.Year %>
+                        <% } %>
+                        <span class="sp-label">&nbsp;<%= reportData.Property_City %>,&nbsp;
+                          <%= reportData.Property_State_Abbr %>&nbsp;(<%= order.prtTaxAuthorityType %>)</span>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Parcel/Tax ID:</span>
+                      <span class="sp-info"><%= order.Parcel %></span>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-25 sp-label">Land</div>
+                    <div class="w-25 sp-label">Building</div>
+                    <div class="w-25 sp-label">Extras</div>
+                    <div class="w-25 sp-label">Total</div>
+                  </div> 
+                  <div class="clearfix">
+                    <div class="w-25 sp-info"><%= order.landVal %></div>
+                    <div class="w-25 sp-info"><%= order.buildVal %></div>
+                    <div class="w-25 sp-info"><%= order.extraVal %></div>
+                    <div class="w-25 sp-info"><%= order.totVal %></div>
+                  </div>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label clearfix">Comments:</div>
+                  <div class="sp-info clearfix">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.Assessments.length - 1 ) { %> 
+                    <div class="sp-line">
+                    </div>
+                  <% } %>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 2 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Assessment
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.Taxes.length> 0) { %>
+              <div class="sp-section">
+                <% orders.Report.Taxes.forEach((order,index)=> { %>
+                <div class="sp-no-break">
+                  <%  if(index == 0) { %>
+                  <div class="sp-sec-title">
+                    <% if (orders.Report.Taxes[0].titleDocPresent){ %>
+                      <a href="TAX_ES-T" class = "sp-annot">Taxes</a>
+                    <% } else { %>
+                      Taxes
+                    <% } %>
+                  </div>
+                  <% } %>
+                  <div class="sp-section-items">
+                    <% if(index == 0) {
+                      if (orders.Report.General_Comments.length> 0) { 
+                      orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                        if (genCmt.Comments_Type_ID == 3 && genCmt.Comments && 
+                        genCmt.Comments.trim() ) { %>
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                        <div class="sp-gen-comments"></div>
+                      <% } 
+                      }) 
+                    }
+                    } %> 
+                    <div class="d-flex-between">
+                      <div>
+                        <span class="sp-subsec-title">
+                          <% if (order.docPresent){ %>
+                            <a href="TAX_ES-<%= index %>" class = "sp-annot">
+                              <%= order.taxYear %></a>
+                          <% } else if (order.hasOwnProperty('attachments')){ %>
+                            <a href="<%= order.attachments %>" target="_blank" class = "sp-annot"><%= order.taxYear %></a>
+                          <% } else { %>
+                            <%= order.taxYear %>
+                          <% } %>
+                        </span>
+                        <span class="sp-label">&nbsp;<%= reportData.Property_City %>,&nbsp;
+                          <%= reportData.Property_State_Abbr %>&nbsp;(<%= order.prtTaxAuthorityType %>)</span>
+                      </div>
+                      <div>
+                        <span class="sp-label">Parcel/Tax ID:</span>
+                        <span class="sp-info"><%= order.Parcel %></span>
+                      </div>
+                    </div>
+                    <% if((order.Entity_ID==1 || order.Entity_ID==4) && (order.prtTaxStat !== "NOT APPLICABLE")) { %>
+                    <div class="clearfix">
+                      <div class="w-33 sp-label">Status</div>
+                      <div class="w-34 sp-label">Amount</div>
+                      <div class="w-33 sp-label"><%= order.prtDtLbl %></div>
+                    </div> 
+                    <div class="clearfix">
+                      <div class="w-33 sp-info"><%= order.prtTaxStat %></div>
+                      <div class="w-34 sp-info"><%= order.prtTaxAmt %></div>
+                      <div class="w-33 sp-info"><%= order.prtPaidDate %></div>
+                    </div>
+                    <div class="clearfix">
+                      <div class="w-33 sp-label">Prior Delinquencies</div>
+                      <div class="w-34 sp-label">Source</div>
+                    </div> 
+                    <div class="clearfix">
+                      <div class="w-33 sp-info"><%= order.prtTxDelinq %></div>
+                      <div class="w-34 sp-info"><%= order.prtSource %></div>
+                    </div>
+                    <% } %>
+                    <% if(order.Entity_ID==2 || order.Entity_ID==3) { %>
+                    <div class="clearfix">
+                      <div class="w-25 sp-label">Period</div>
+                      <div class="w-25 sp-label">Status</div>
+                      <div class="w-25 sp-label">Amount</div>
+                      <div class="w-25 sp-label"><%= order.prtDtLbl %></div>
+                    </div> 
+                    <% if(order.taxPeriod1 !== undefined && order.prtTaxStat !== "NOT APPLICABLE") { %>
+                      <div class="clearfix">
+                        <div class="w-25 sp-info"><%= order.taxPeriod1 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxStat %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxAmt %></div>
+                        <div class="w-25 sp-info"><%= order.prtPaidDate %></div>
+                      </div>
+                    <% } %> 
+                    <% if(order.taxPeriod2 !== undefined && order.prtTaxStat2 !== "NOT APPLICABLE") { %>
+                      <div class="clearfix">
+                        <div class="w-25 sp-info"><%= order.taxPeriod2 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxStat2 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxAmt2 %></div>
+                        <div class="w-25 sp-info"><%= order.prtPaidDate2 %></div>
+                      </div>
+                    <% } %> 
+                    <% if(order.taxPeriod3 !== undefined && order.prtTaxStat3 !== "NOT APPLICABLE") { %>
+                      <div class="clearfix">
+                        <div class="w-25 sp-info"><%= order.taxPeriod3 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxStat3 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxAmt3 %></div>
+                        <div class="w-25 sp-info"><%= order.prtPaidDate3 %></div>
+                      </div>
+                    <% } %> 
+                    <% if(order.taxPeriod4 !== undefined && order.prtTaxStat4 !== "NOT APPLICABLE") { %>
+                      <div class="clearfix">
+                        <div class="w-25 sp-info"><%= order.taxPeriod4 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxStat4 %></div>
+                        <div class="w-25 sp-info"><%= order.prtTaxAmt4 %></div>
+                        <div class="w-25 sp-info"><%= order.prtPaidDate4 %></div>
+                      </div>
+                    <% } %>
+                    <div class="clearfix">
+                      <div class="w-50 sp-label">Prior Delinquencies</div>
+                      <div class="w-50 sp-label">Source</div>
+                    </div> 
+                    <div class="clearfix">
+                      <div class="w-50 sp-info"><%= order.prtTxDelinq %></div>
+                      <div class="w-50 sp-info"><%= order.prtSource %></div>
+                    </div>
+                    <% } %>
+                    <% if (order.Comments && order.Comments.trim()) { %>
+                    <div class="sp-label clearfix">Comments:</div>
+                    <div class="sp-info clearfix">
+                      <% let Comments = order.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% }  
+                      }) %>
+                    </div>
+                    <% } %>
+                    <% if (index !== orders.Report.Taxes.length - 1 ) { %> 
+                    <div class="sp-line">
+                    </div>
+                    <% } %>
+                  </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 3 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Taxes
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.Vesting_Deed.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.Vesting_Deed.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Vesting_Deed[0].titleDocPresent){ %>
+                    <a href="VES_DD-T" class = "sp-annot">Vesting Deed</a>
+                  <% } else { %>
+                    Vesting Deed
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                    if (orders.Report.General_Comments.length> 0) { 
+                    orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                      if (genCmt.Comments_Type_ID == 4 && genCmt.Comments && 
+                      genCmt.Comments.trim() ) { %>
+                      <div class="sp-label">General Comments</div>
+                      <div class="sp-info">
+                      <% let Comments = genCmt.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% }  
+                        }) %>
+                      </div>
+                      <div class="sp-gen-comments"></div>
+                    <% } 
+                    }) 
+                  }
+                  } %> 
+                  <div class="clearfix">
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="VES_DD-<%= index %>" class = "sp-annot">
+                            <%= order.deedEntityLabel %></a>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot">
+                            <%= order.deedEntityLabel %>
+                          </a>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                            <% } else { %>
+                              <%= order.deedEntityLabel %>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                            <% } %>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Bk/Pg or Inst Number#:</span>
+                      <span class="sp-info"><%= order.prtInstNum %></span>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label"><%= order.prtDeedDateLbl %></div>
+                    <div class="w-33 sp-label">Recorded</div>
+                    <div class="w-34 sp-label">Consideration</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info"><%= order.prtDeedDate %></div>
+                    <div class="w-33 sp-info"><%= order.prtRecDate %></div>
+                    <div class="w-34 sp-info"><%= order.prtCsndrtnAmt %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label"><%= order.prtFromLbl %></div>
+                    <div class="w-33 sp-label"><%= order.prtToLbl %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info">
+                      <% if ( order.prtFromData ) {
+                        let deedFrom = order.prtFromData.split("\n"); 
+                          deedFrom.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% }
+                          }) } else { %>
+                            N/A
+                            <% } %>
+                    </div>
+                    <div class="w-33 sp-info">
+                      <% if ( order.prtToData ) {
+                        let deedTo = order.prtToData.split("\n"); 
+                          deedTo.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% }
+                          }) } else { %>
+                            N/A
+                            <% } %>
+                    </div>
+                  </div>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label clearfix">Comments:</div>
+                  <div class="sp-info clearfix">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.Vesting_Deed.length - 1 ) { %> 
+                  <div class="sp-line">
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 4 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Vesting Deed
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% }  
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.Chain_Of_Title.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.Chain_Of_Title.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Chain_Of_Title[0].titleDocPresent){ %>
+                    <a href="CHN_TL-T" class = "sp-annot">Chain Of Title</a>
+                  <% } else { %>
+                    Chain Of Title
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                    if (orders.Report.General_Comments.length> 0) { 
+                    orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                      if (genCmt.Comments_Type_ID == 5 && genCmt.Comments && 
+                      genCmt.Comments.trim() ) { %>
+                      <div class="sp-label">General Comments</div>
+                      <div class="sp-info">
+                      <% let Comments = genCmt.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                        }) %>
+                      </div>
+                      <div class="sp-gen-comments"></div>
+                    <% } 
+                    }) 
+                  }
+                  } %> 
+                  <div>
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="CHN_TL-<%= index %>" class = "sp-annot">
+                            <%= order.deedEntityLabel %></a>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot">
+                            <%= order.deedEntityLabel %>
+                          </a>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                            <% } else { %>
+                              <%= order.deedEntityLabel %>&nbsp;&nbsp;<span class="sp-label"><%= order.prtDeedType %></span>
+                            <% } %>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Bk/Pg or Inst Number#:</span>
+                      <span class="sp-info"><%= order.prtInstNum %></span>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label"><%= order.prtDeedDateLbl %></div>
+                    <div class="w-33 sp-label">Recorded</div>
+                    <div class="w-34 sp-label">Consideration</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info"><%= order.prtDeedDate %></div>
+                    <div class="w-33 sp-info"><%= order.prtRecDate %></div>
+                    <div class="w-34 sp-info"><%= order.prtCsndrtnAmt %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label"><%= order.prtFromLbl %></div>
+                    <div class="w-33 sp-label"><%= order.prtToLbl %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info">
+                      <% if ( order.prtFromData ) {
+                        let deedFrom = order.prtFromData.split("\n"); 
+                          deedFrom.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% }
+                          }) } else { %>
+                            N/A
+                            <% } %>
+                    </div>
+                    <div class="w-33 sp-info">
+                      <% if ( order.prtToData ) {
+                        let deedTo = order.prtToData.split("\n"); 
+                          deedTo.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% }
+                          }) } else { %>
+                            N/A
+                            <% } %>
+                    </div>
+                  </div>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label clearfix">Comments:</div>
+                  <div class="sp-info clearfix">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.Chain_Of_Title.length - 1 ) { %> 
+                  <div class="sp-line">
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 5 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Chain Of Title
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% }  
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.Security_Instruments.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.Security_Instruments.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.Security_Instruments[0].titleDocPresent){ %>
+                    <a href="SCR_IN-T" class = "sp-annot">Security Instruments</a>
+                  <% } else { %>
+                    Security Instruments
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                    if (orders.Report.General_Comments.length> 0) { 
+                    orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                      if (genCmt.Comments_Type_ID == 6 && genCmt.Comments && 
+                      genCmt.Comments.trim() ) { %>
+                      <div class="sp-label">General Comments</div>
+                      <div class="sp-info">
+                      <% let Comments = genCmt.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% }  
+                        }) %>
+                      </div>
+                      <div class="sp-gen-comments"></div>
+                    <% } 
+                    }) 
+                  }
+                  } %> 
+                  <div class="clearfix">
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="SCR_IN-<%= index %>" class = "sp-annot">
+                            <%= order.Entity_Label %></a>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot"><%= order.Entity_Label %></a>
+                        <% } else { %>
+                          <%= order.Entity_Label %>
+                        <% } %>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Bk/Pg or Inst Number#:</span>
+                      <span class="sp-info"><%= order.prtInstNum %></span>
+                    </div>
+                  </div>  
+                  <div class="clearfix">
+                    <div class="w-20 sp-label">Dated</div>
+                    <div class="w-20 sp-label"><%= order.prtLbl2 %></div>
+                    <div class="w-20 sp-label"><%= order.prtLbl3 %></div>
+                    <div class="w-20 sp-label"><%= order.prtLbl4 %></div>
+                    <div class="w-20 sp-label"><%= order.prtLbl5 %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-20 sp-info"><%= order.prtData1 %></div>
+                    <div class="w-20 sp-info"><%= order.prtData2 %></div>
+                    <div class="w-20 sp-info"><%= order.prtData3 %></div>
+                    <div class="w-20 sp-info"><%= order.prtData4 %></div>
+                    <div class="w-20 sp-info"><%= order.prtData5 %></div>
+                  </div>
+                  <% if ([1,2,3,4,5,12,13,14].includes(order.Entity_ID)) { %>
+                  <div class="clearfix">
+                    <div class="w-50 sp-label">Borrower</div>
+                    <div class="w-50 sp-label">Lender</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-50 sp-info">
+                      <% if ( order.Borrower) { let siBorrs = order.Borrower.split("\n"); 
+                            siBorrs.forEach((rec,i)=>{ 
+                              if(rec){ %>
+                                <%= rec %><br>
+                                <% } else { %><br> <% }
+                            }) } else { %>
+                              N/A
+                              <% } %>
+                    </div>
+                    <div class="w-50 sp-info">
+                      <% if ( order.Lender) { let siLndr = order.Lender.split("\n"); 
+                            siLndr.forEach((rec,i)=>{ 
+                              if(rec){ %>
+                                <%= rec %><br>
+                                <% } else { %><br> <% }
+                            }) } else { %>
+                              N/A
+                              <% } %>
+                    </div>
+                  </div>
+                  <% } %>
+                  <% if ( order.Trustee && order.Trustee.trim() && 
+                  order.Entity_ID !=1) { %>
+                  <div class="sp-label clearfix">Trustee</div>
+                  <div class="sp-info clearfix">
+                    <% let siTrst = order.Trustee.split("\n"); 
+                    siTrst.forEach((rec,i)=>{ 
+                      if(rec){ %>
+                        <%= rec %><br>
+                        <% } else { %>
+                          <br>
+                        <% }  
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if ( order.Rider && order.Rider.trim()) { %>
+                  <div class="sp-label clearfix">Rider</div>
+                  <div class="sp-info clearfix">
+                    <% let siRidr = order.Rider.split("\n"); 
+                    siRidr.forEach((rec,i)=>{ 
+                      if(rec){ %>
+                        <%= rec %><br>
+                        <% } else { %>
+                          <br>
+                        <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if ( order.Assignments && order.Assignments.trim()) { %>
+                  <div class="sp-label clearfix">Assignments</div>
+                  <div class="sp-info clearfix">
+                    <% let siAsngnmnt = order.Assignments.split("\n"); 
+                    siAsngnmnt.forEach((rec,i)=>{ 
+                      if(rec){ %>
+                        <%= rec %><br>
+                        <% } else { %>
+                          <br>
+                        <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label clearfix">Comments:</div>
+                  <div class="sp-info clearfix">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.Security_Instruments.length - 1 ) { %> 
+                  <div class="sp-line">
+                  </div>
+                  <% } %>
+              
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 6 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Security Instruments
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.LienAndJudgement.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.LienAndJudgement.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.LienAndJudgement[0].titleDocPresent){ %>
+                    <a href="LEN_JG-T" class = "sp-annot">Liens & Judgements</a>
+                  <% } else { %>
+                    Liens & Judgements
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                    <% if (index == 0) { %>
+
+                      <% if (orders.namesSearched.length> 0) { %>
+                        <div class="sp-label">Names Searched</div> 
+                        <div class="sp-info clearfix">
+                          <% orders.namesSearched.forEach((obj, nameIndex) => { %>
+                            <%= obj.name %> 
+                            <span class="sp-info-normal">(
+                              <% if (obj.judgmnts) { %>
+                                <span class="sp-bold"><%=obj.judgLabel %></span>
+                              <% } else { %>  
+                                <%=obj.judgLabel %>
+                              <% } %>/
+                              <% if (obj.liens) { %>
+                                <span class="sp-bold"><%=obj.lienLabel %></span>
+                              <% } else { %>  
+                                <%=obj.lienLabel %>
+                              <% } %> found)
+                            </span>
+                            <br>
+                          <% }); %>
+                        </div>
+                        <!-- Give line if no general comments present -->
+                        <% if (orders.Report.General_Comments.length == 0) { %>
+                        <div class="sp-gen-comments"></div>
+                        <% } else { %>
+                          <% const type7Comments = orders.Report.General_Comments.filter((genCmt) => {
+                            return genCmt.Comments_Type_ID === 7 && genCmt.Comments && genCmt.Comments.trim();
+                          }); %>                
+                          <% if (type7Comments.length === 0) { %>
+                            <div class="sp-gen-comments"></div>
+                          <% } %>                
+                        <% } %>
+                      <% } %>
+          
+                      <% if (orders.Report.General_Comments.length > 0) { %>
+                        <% orders.Report.General_Comments.forEach((genCmt, commentIndex) => { %>
+                          <% if (genCmt.Comments_Type_ID == 7 && genCmt.Comments && genCmt.Comments.trim()) { %>
+                            <div class="sp-label">General Comments</div>
+                            <div class="sp-info">
+                              <% let Comments = genCmt.Comments.split("\n"); %>
+                              <% Comments.forEach((rec, recIndex) => { %>
+                                <% if (rec) { %>
+                                  <%= rec %><br>
+                                <% } else { %>
+                                  <br>
+                                <% } %>
+                              <% }); %>
+                            </div>
+                            <div class="sp-gen-comments"></div>
+                          <% } %>
+                        <% }); %>
+                      <% } %>
+                    <% } %>
+                  <div class="clearfix">
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="LEN_JG-<%= index %>" class = "sp-annot">
+                            <%= order.headerText %></a>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot"><%= order.headerText %></a>
+                        <% } else { %>
+                          <%= order.headerText %>
+                        <% } %>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Bk/Pg or Case#:</span>
+                      <span class="sp-info"><%= order.prtInstNum %></span>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label"><%= order.prtHdr1 %></div>
+                    <div class="w-34 sp-label"><%= order.prtHdr2 %></div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info">
+                      <% if ( (order.Debtor_Defendant && order.prtHdr2 !== "") || 
+                      (order.Against_Or_Infavorof && order.prtHdr2 == "")) { 
+                        let deedFrom = []; 
+                        if(order.prtHdr2 == "") deedFrom = order.Against_Or_Infavorof.split("\n");
+                        else deedFrom = order.Debtor_Defendant.split("\n");
+                          deedFrom.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% } 
+                          }) } else { %>
+                            N/A
+                            <% } %>
+                    </div>
+                    <div class="w-34 sp-info">
+                      <% if (order.prtHdr2 !== "") {
+                        if ( order.Against_Or_Infavorof) { let deedTo = order.Against_Or_Infavorof.split("\n"); 
+                          deedTo.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                              <%= rec %><br>
+                              <% } else { %><br> <% }
+                          }) } else { %>
+                            N/A
+                            <% } } %>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-label">Dated</div>
+                    <div class="w-34 sp-label">Amount</div>
+                    <div class="w-33 sp-label">Recorded</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-33 sp-info"><%= order.prtLienDate %></div>
+                    <div class="w-34 sp-info"><%= order.prtLienAmt %></div>
+                    <div class="w-33 sp-info"><%= order.prtRecDate %></div>
+                  </div>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                  <div class="sp-label clearfix">Comments:</div>
+                  <div class="sp-info clearfix">
+                    <% let Comments = order.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% }  
+                    }) %>
+                  </div>
+                  <% } %>
+                  <% if (index !== orders.Report.LienAndJudgement.length - 1 ) { %> 
+                  <div class="sp-line">
+                  </div>
+                  <% } %>
+              
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0 || orders.namesSearched.length> 0) { %>
+              <% const type7Comments = orders.Report.General_Comments.filter((genCmt) => {
+                return genCmt.Comments_Type_ID === 7 && genCmt.Comments && genCmt.Comments.trim();
+              }); %> 
+              <% if (type7Comments.length > 0 || orders.namesSearched.length> 0) { %>
+              <div class="sp-section">
+                  <div class="sp-no-break">
+                    <div class="sp-sec-title">
+                      Liens & Judgements
+                    </div>
+                    <div class="sp-section-items">
+                        <% if (orders.namesSearched.length> 0) { %>
+                          <div class="sp-label">Names Searched</div> 
+                          <div class="sp-info clearfix">
+                            <% orders.namesSearched.forEach((obj, nameIndex) => { %>
+                              <%= obj.name %> 
+                              <span class="sp-info-normal">(
+                                <% if (obj.judgmnts) { %>
+                                  <span class="sp-bold"><%=obj.judgLabel %></span>
+                                <% } else { %>  
+                                  <%=obj.judgLabel %>
+                                <% } %>/
+                                <% if (obj.liens) { %>
+                                  <span class="sp-bold"><%=obj.lienLabel %></span>
+                                <% } else { %>  
+                                  <%=obj.lienLabel %>
+                                <% } %> found)
+                              </span>
+                              <br>
+                            <% }); %>
+                          </div>
+                        <% } %>
+                        <% orders.Report.General_Comments.forEach((genCmt, commentIndex) => { %>
+                          <% if (genCmt.Comments_Type_ID == 7 && genCmt.Comments && genCmt.Comments.trim()) { %>
+                            <div class="sp-label">General Comments</div>
+                            <div class="sp-info">
+                            <% let Comments = genCmt.Comments.split("\n"); 
+                              Comments.forEach((rec,i)=>{ 
+                                if(rec){ %>
+                                <%= rec %><br>
+                                <% } else { %>
+                                  <br>
+                                <% } 
+                              }) %>
+                            </div>
+                          <% } %>
+                        <% }); %>                
+                    </div>
+                  </div>
+              </div>
+              <% } %> 
+            <% } %>
+
+            <% if (orders.Report.ERA.length> 0) { %>
+            <div class="sp-section">
+              <% orders.Report.ERA.forEach((order,index)=> { %>
+              <div class="sp-no-break">
+                <%  if(index == 0) { %>
+                <div class="sp-sec-title">
+                  <% if (orders.Report.ERA[0].titleDocPresent){ %>
+                    <a href="ERA-T" class = "sp-annot">Encumbrances and Restrictions</a>
+                  <% } else { %>
+                    Encumbrances and Restrictions
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="sp-section-items">
+                  <% if(index == 0) {
+                    if (orders.Report.General_Comments.length> 0) { 
+                    orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                      if (genCmt.Comments_Type_ID == 8 && genCmt.Comments && 
+                      genCmt.Comments.trim() ) { %>
+                      <div class="sp-label">General Comments</div>
+                      <div class="sp-info">
+                      <% let Comments = genCmt.Comments.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                        }) %>
+                      </div>
+                      <div class="sp-gen-comments"></div>
+                    <% } 
+                    }) 
+                  }
+                  } %> 
+                  <div >
+                    <div class="w-50">
+                      <span class="sp-subsec-title">
+                        <% if (order.docPresent){ %>
+                          <a href="ERA-<%= index %>" class = "sp-annot">
+                            <%= order.Entity_Label %></a>
+                        <% } else if (order.hasOwnProperty('attachments')){ %>
+                          <a href="<%= order.attachments %>" target="_blank" class = "sp-annot"><%= order.Entity_Label %></a>
+                        <% } else { %>
+                          <%= order.Entity_Label %>
+                        <% } %>
+                      </span>
+                    </div>
+                    <div class="w-50 text-right">
+                      <span class="sp-label">Bk/Pg or Inst Number#:</span>
+                      <span class="sp-info"><%= order.prtInstNum %></span>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-50 sp-label">Dated</div>
+                    <div class="w-50 sp-label">Recorded</div>
+                  </div>
+                  <div class="clearfix">
+                    <div class="w-50 sp-info"><%= order.prtERADate %></div>
+                    <div class="w-50 sp-info"><%= order.prtRecDate %></div>
+                  </div>
+                  <% if (order.Detail && order.Detail.trim()) { %>
+                    <div class="clearfix">
+                  <div class="sp-label">Details:</div>
+                  <div class="sp-info">
+                    <% let Comments = order.Detail.split("\n"); 
+                        Comments.forEach((rec,i)=>{ 
+                        if(rec){ %>
+                          <%= rec %><br>
+                          <% } else { %>
+                            <br>
+                          <% } 
+                    }) %>
+                  </div>
+                  </div>
+                  <% } %>
+                  <% if (order.Comments && order.Comments.trim()) { %>
+                    <div class="sp-label clearfix">Comments:</div>
+                    <div class="sp-info clearfix">
+                      <% let Comments = order.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                          if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% }  
+                      }) %>
+                    </div>
+                  <% } %>
+                  <% if (index !== orders.Report.ERA.length - 1 ) { %> 
+                  <div class="sp-line">
+                  </div>
+                  <% } %>
+              
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <% } else if (orders.Report.General_Comments.length> 0) { 
+              orders.Report.General_Comments.forEach((genCmt, index)=> { 
+                if (genCmt.Comments_Type_ID == 8 && genCmt.Comments && 
+                genCmt.Comments.trim() )  {%>
+                  <div class="sp-section">
+                    <div class="sp-no-break">
+                      <div class="sp-sec-title">
+                        Encumbrances and Restrictions
+                      </div>
+                      <div class="sp-section-items">
+                        <div class="sp-label">General Comments</div>
+                        <div class="sp-info">
+                        <% let Comments = genCmt.Comments.split("\n"); 
+                          Comments.forEach((rec,i)=>{ 
+                            if(rec){ %>
+                            <%= rec %><br>
+                            <% } else { %>
+                              <br>
+                            <% } 
+                          }) %>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <% }})} %>
+
+            <% if (orders.Report.ReportDetails.Other_Information) { %>
+            <div class="sp-section sp-no-break">
+              <div class="sp-sec-title">
+                <% if (orders.Report.ReportDetails.rprtDocPresent){ %>
+                  <a href="ADD_DC-T" class = "sp-annot">Additional Information</a>
+                <% } else if (orders.Report.ReportDetails.hasOwnProperty('rprtAttachments')){ %>
+                  <a href="<%= orders.Report.ReportDetails.rprtAttachments %>" target="_blank" class = "sp-annot">Additional Information</a>
+                <% } else { %>
+                  Additional Information
+                <% } %>
+              </div>
+              <div class="sp-section-items sp-info">
+                <% if ( orders.Report.ReportDetails.Other_Information) { let Comments = orders.Report.ReportDetails.Other_Information.split("\n"); 
+                  Comments.forEach((rec,i)=>{ 
+                  if(rec){ %>
+                    <%= rec %><br>
+                    <% } else { %>
+                      <br>
+                    <% } 
+                }) } %>
+              </div>
+            </div>
+            <% } %>
+
+            <% if (orders.Report.reportChanges.length > 0) { %>
+            <div class="sp-section sp-no-break">
+              <div class="sp-sec-title">
+                  Report Changes
+              </div>
+              <div class="sp-section-items sp-info">
+                <%  orders.Report.reportChanges.forEach((rec,)=>{ %>
+                  <%= rec %><br>
+                <%  })  %>
+              </div>
+            </div>
+            <% } %>
+          
+            <div class="endOfReport">
+              END OF REPORT
+            </div>
+            <div class="sp-no-break disclaimerTxt">
+              <%- orders.Disclaimer %>
+            </div>
+
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot  class="w-100">
+      <tr>
+        <td>
+          <div class="pgFtr">
+            <img src="<%= orders.footerpathcust %>" style="width: 100%;"><br>
+            <div style="display: flex;flex-direction: row;width: 100%;">
+              <div style="width: 100%;display: flex;flex-direction: row;">
+
+                  <div style="width:30%" class="sp-ftr-txt">
+                    <%= orders.searchDate %>  at <%= orders.searchTime %> 
+                    <%= orders.estOrEdt %>
+                  </div>
+                  <div style="width:30%;display: flex; justify-content: center;" class="sp-ftr-txt text-center sp-bold">
+                    <%= orders.footerTxt %>
+                  </div>
+                  <div style="width:30%" class="sp-ftr-txt text-right">
+                  </div>
+                <div style="width:5%"></div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+
+  </table>
+</body>
+
+</html>

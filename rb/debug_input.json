@@ -1,0 +1,1593 @@
+{
+  "orders": {
+    "Report": {
+      "Property_Details": {
+        "CT_Manual_Sort": 0,
+        "ER_Manual_Sort": 0,
+        "Id": 7574,
+        "Include_Does_Not_Apply": 0,
+        "Interest_Type_Id": 0,
+        "LJ_Manual_Sort": 0,
+        "Order_ID": 384788,
+        "PUD": 0,
+        "Parcel": "",
+        "ParcelText": "N/A",
+        "Registry": 0,
+        "SI_Manual_Sort": 0,
+        "VD_Manual_Sort": 0,
+        "estateLabel": "N/A",
+        "propDocPresent": false,
+        "rprtDocPresent": false
+      },
+      "ReportDetails": {
+        "CT_Manual_Sort": 0,
+        "ER_Manual_Sort": 0,
+        "Id": 7574,
+        "Include_Does_Not_Apply": 0,
+        "Interest_Type_Id": 0,
+        "LJ_Manual_Sort": 0,
+        "Order_ID": 384788,
+        "PUD": 0,
+        "Parcel": "",
+        "ParcelText": "N/A",
+        "Registry": 0,
+        "SI_Manual_Sort": 0,
+        "VD_Manual_Sort": 0,
+        "estateLabel": "N/A",
+        "propDocPresent": false,
+        "rprtDocPresent": false
+      },
+      "Search_Parties": [],
+      "Assessments": [],
+      "Taxes": [],
+      "Vesting_Deed": [],
+      "Chain_Of_Title": [],
+      "Security_Instruments": [],
+      "LienAndJudgement": [],
+      "ERA": [],
+      "General_Comments": [],
+      "reportChanges": [],
+      "SP_Version": "1"
+    },
+    "OrderData": {
+      "AbstractorUserFirstName": {
+        "String": "",
+        "Valid": false
+      },
+      "AbstractorUserFullName": {
+        "String": "",
+        "Valid": false
+      },
+      "AbstractorUserLastName": {
+        "String": "",
+        "Valid": false
+      },
+      "AbstractorUserRole": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "AbstractorUserStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "AbstratorID": {
+        "String": "",
+        "Valid": false
+      },
+      "AbstratorUserID": {
+        "String": "",
+        "Valid": false
+      },
+      "AdminUserFirstName": {
+        "String": "",
+        "Valid": false
+      },
+      "AdminUserFullName": {
+        "String": "",
+        "Valid": false
+      },
+      "AdminUserLastName": {
+        "String": "",
+        "Valid": false
+      },
+      "AdminUserRole": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "AdminUserStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "AdminUserType": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "BorrowerSSN": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyAddress1": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyAddress2": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyCity": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyCreationDate": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyFirstName": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyID": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyLastName": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyLatitude": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyLongitude": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyState": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyStateAbbr": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "CoBorrowerPropertyStatusMessage": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerPropertyZipCode": {
+        "String": "",
+        "Valid": false
+      },
+      "CoBorrowerSSN": {
+        "String": "",
+        "Valid": false
+      },
+      "CompanyID": {
+        "String": "",
+        "Valid": false
+      },
+      "CompanyName": {
+        "String": "",
+        "Valid": false
+      },
+      "CustomerID": {
+        "String": "8b45a20a-36da-412c-9641-32124bf0ea8c",
+        "Valid": true
+      },
+      "DemoFlag": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "FileID": {
+        "String": "gvb",
+        "Valid": true
+      },
+      "FrgnCompanyID": {
+        "String": "",
+        "Valid": false
+      },
+      "FrgnInternalOrderID": {
+        "String": "",
+        "Valid": false
+      },
+      "LatestNote": {
+        "String": "",
+        "Valid": false
+      },
+      "LoanID": {
+        "String": "",
+        "Valid": false
+      },
+      "Logo": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderAddressManualFlag": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderAdminID": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderAssignedDate": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderAutomated": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderBook": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderBuyer": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCancellationDate": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCoBuyer": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCoSeller": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCompletionDate": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCreationDate": {
+        "String": "2026-05-12 06:45:17",
+        "Valid": true
+      },
+      "OrderCustomPrice": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCustomPriceTax": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderCustomerFileNumber": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderETA": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderETARange": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderEscalated": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderEstimatedTime": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderFinalPrice": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderFinalPriceTax": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderID": {
+        "Int64": 384788,
+        "Valid": true
+      },
+      "OrderInternalDueTime": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderLoan": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderMaxTat": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderMinTat": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderModificationDate": {
+        "String": "2026-05-12 06:45:17",
+        "Valid": true
+      },
+      "OrderMortgageAmount": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderMortgageDate": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderOriginalETA": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderPage": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderParcel": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderPausedFlag": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderPredictionResult": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderPriority": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderProductFlag": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderProductStatus": {
+        "Int64": 1,
+        "Valid": true
+      },
+      "OrderPurpose": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderQualiaInternalID": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderReportedErrorStatus": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderRequestedDate": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderSeller": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderSentBackToScreen": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "OrderStatus": {
+        "Int64": 1,
+        "Valid": true
+      },
+      "OrderStatusMessages": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderStripeChargeID": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderSubdivision": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderTags": {
+        "String": "",
+        "Valid": false
+      },
+      "OrderTagsFormatted": {
+        "String": "",
+        "Valid": false
+      },
+      "OrganizationDescription": {
+        "String": "",
+        "Valid": false
+      },
+      "OrganizationID": {
+        "String": "7e9f0dfb-c662-4c20-889b-740e7748df69",
+        "Valid": true
+      },
+      "OrganizationName": {
+        "String": "(OH 5756) - Empora Title, LLC",
+        "Valid": true
+      },
+      "OrganizationStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "ParsedPropertyAddress1": {
+        "String": "",
+        "Valid": false
+      },
+      "ProductDescription": {
+        "String": "20-Year Search",
+        "Valid": true
+      },
+      "ProductID": {
+        "Int64": 1028,
+        "Valid": true
+      },
+      "ProductType": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyAddress1": {
+        "String": "8990 Turkey Lake Road",
+        "Valid": true
+      },
+      "PropertyAddress2": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyCity": {
+        "String": "Orlando",
+        "Valid": true
+      },
+      "PropertyCounty": {
+        "String": "ORANGE",
+        "Valid": true
+      },
+      "PropertyCreationDate": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyFirstName": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyID": {
+        "String": "064d0a93-7e9b-4b6b-9661-6b7e089610b4",
+        "Valid": true
+      },
+      "PropertyLastName": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyLatitude": {
+        "String": "28.439962299999998",
+        "Valid": true
+      },
+      "PropertyLongitude": {
+        "String": "-81.4764486",
+        "Valid": true
+      },
+      "PropertyState": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyStateAbbr": {
+        "String": "FL",
+        "Valid": true
+      },
+      "PropertyStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "PropertyStatusMessage": {
+        "String": "",
+        "Valid": false
+      },
+      "PropertyZipCode": {
+        "String": "32819",
+        "Valid": true
+      },
+      "QualiaFlag": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "RecipientAddress": {
+        "String": "",
+        "Valid": false
+      },
+      "RecipientName": {
+        "String": "",
+        "Valid": false
+      },
+      "RecipientPhone": {
+        "String": "",
+        "Valid": false
+      },
+      "ReportVersion": {
+        "String": "",
+        "Valid": false
+      },
+      "SPDocInReport": {
+        "Int64": 1,
+        "Valid": true
+      },
+      "SPTemplate": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "SalesPrice": {
+        "String": "",
+        "Valid": false
+      },
+      "SearchDuration": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "SettlementDate": {
+        "String": "",
+        "Valid": false
+      },
+      "SourceTypeID": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "SubscriptionStatus": {
+        "String": "",
+        "Valid": false
+      },
+      "TitlesID": {
+        "String": "",
+        "Valid": false
+      },
+      "UserFirstName": {
+        "String": "Ida",
+        "Valid": true
+      },
+      "UserFullName": {
+        "String": "Ida Pagara",
+        "Valid": true
+      },
+      "UserLastName": {
+        "String": "Pagara",
+        "Valid": true
+      },
+      "UserLoginName": {
+        "String": "gs1@emporatitle.comm",
+        "Valid": true
+      },
+      "UserOrderExportToReport": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "UserRole": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "UserStatus": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "YearsRequired": {
+        "Int64": 0,
+        "Valid": false
+      },
+      "CompleteAddress": "8990 Turkey Lake Road\nOrlando, FL 32819",
+      "ReportCoverInfo": {
+        "String": "",
+        "Valid": false
+      }
+    },
+    "BuilderData": {
+      "SearchPackage": {
+        "ID": 7574,
+        "OrderID": {
+          "Int64": 384788,
+          "Valid": true
+        },
+        "BuilderID": {
+          "String": "",
+          "Valid": false
+        },
+        "VDManualSort": {
+          "Int64": 0,
+          "Valid": true
+        },
+        "CTManualSort": {
+          "Int64": 0,
+          "Valid": true
+        },
+        "SIManualSort": {
+          "Int64": 0,
+          "Valid": true
+        },
+        "LJManualSort": {
+          "Int64": 0,
+          "Valid": true
+        },
+        "ERManualSort": {
+          "Int64": 0,
+          "Valid": true
+        },
+        "PUD": {
+          "Int64": 0,
+          "Valid": false
+        },
+        "Parcel": {
+          "String": "",
+          "Valid": false
+        },
+        "Registry": {
+          "Int64": 0,
+          "Valid": false
+        },
+        "InterestTypeID": {
+          "Int64": 0,
+          "Valid": false
+        },
+        "IncludeDoesNotApply": {
+          "Int64": 0,
+          "Valid": false
+        }
+      },
+      "SPParties": [],
+      "SPAssessments": [],
+      "SPTaxes": [],
+      "SPChainOfTitlesVD": [],
+      "SPChainOfTitlesCT": [],
+      "SPSecurityInstruments": [],
+      "SPLienJudgement": [],
+      "SPExceptionRestrictionAdverse": [],
+      "GlobalCommitments": null,
+      "CommitmentTypings": null,
+      "SPDocuments": null,
+      "SPGeneralComments": null
+    },
+    "PrepData": {
+      "DocTypes": [
+        {
+          "Id": 3,
+          "Type": "Tax",
+          "TypeStatus": true
+        },
+        {
+          "Id": 4,
+          "Type": "Chain of Title",
+          "TypeStatus": true
+        },
+        {
+          "Id": 5,
+          "Type": "Security Instrument",
+          "TypeStatus": true
+        },
+        {
+          "Id": 6,
+          "Type": "Lien & Judgement",
+          "TypeStatus": true
+        },
+        {
+          "Id": 7,
+          "Type": "ERA",
+          "TypeStatus": true
+        },
+        {
+          "Id": 8,
+          "Type": "Property",
+          "TypeStatus": true
+        },
+        {
+          "Id": 9,
+          "Type": "Vesting Deed",
+          "TypeStatus": true
+        },
+        {
+          "Id": 10,
+          "Type": "Additional Document",
+          "TypeStatus": true
+        },
+        {
+          "Id": 1,
+          "Type": "Search Party",
+          "TypeStatus": true
+        },
+        {
+          "Id": 2,
+          "Type": "Assessment",
+          "TypeStatus": true
+        }
+      ],
+      "TaxSources": [
+        {
+          "Id": 1,
+          "SourceType": "Online",
+          "TypeStatus": true
+        },
+        {
+          "Id": 2,
+          "SourceType": "Ordered By Mail",
+          "TypeStatus": true
+        },
+        {
+          "Id": 3,
+          "SourceType": "Collected By Phone",
+          "TypeStatus": true
+        }
+      ],
+      "TaxStatus": [
+        {
+          "Id": 1,
+          "StatusType": "Paid",
+          "Status": true
+        },
+        {
+          "Id": 2,
+          "StatusType": "Due",
+          "Status": true
+        },
+        {
+          "Id": 3,
+          "StatusType": "Past Due",
+          "Status": true
+        },
+        {
+          "Id": 4,
+          "StatusType": "Delinquent",
+          "Status": true
+        },
+        {
+          "Id": 5,
+          "StatusType": "Not Yet Assessed",
+          "Status": true
+        },
+        {
+          "Id": 6,
+          "StatusType": "Unknown",
+          "Status": true
+        }
+      ],
+      "ChainTypes": [
+        {
+          "Id": 8,
+          "Type": "Will",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 20,
+          "Type": "Gift Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 22,
+          "Type": "Warranty Deed (Limited)",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 4,
+          "Type": "Quitclaim Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 6,
+          "Type": "Fiduciary Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 26,
+          "Type": "Survivorship Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 9,
+          "Type": "Administration",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 10,
+          "Type": "Death Certificate",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 27,
+          "Type": "Deed of Distribution",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 3,
+          "Type": "Special Warranty Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 19,
+          "Type": "Sheriff's Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 25,
+          "Type": "Unit Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 14,
+          "Type": "Grant Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 1,
+          "Type": "Warranty Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 11,
+          "Type": "Affidavit",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 16,
+          "Type": "Trustee's Deed (Non-FC)",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 23,
+          "Type": "Warranty Deed (Statutory)",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 7,
+          "Type": "Deed of Foreclosure",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 28,
+          "Type": "Corrective Deed ",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 15,
+          "Type": "Property Tax Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 5,
+          "Type": "Bargain & Sale Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 12,
+          "Type": "Other",
+          "TypeId": 99,
+          "Status": true
+        },
+        {
+          "Id": 13,
+          "Type": "Deed in Lieu of Foreclosure",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 17,
+          "Type": "Administrator's Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 18,
+          "Type": "Executor's Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 30,
+          "Type": "Certificate of Transfer",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 31,
+          "Type": "Certificate of Title",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 24,
+          "Type": "Deed of Assignment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 29,
+          "Type": "Title to Real Estate",
+          "TypeId": 1,
+          "Status": true
+        }
+      ],
+      "LienTypes": [
+        {
+          "Id": 3,
+          "Type": "Association Violation/Fine",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 42,
+          "Type": "State Tax - Income",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 57,
+          "Type": "Divorce Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 19,
+          "Type": "HOA Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 40,
+          "Type": "Special Tax Assessment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 43,
+          "Type": "State Tax - Unsecured Property",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 41,
+          "Type": "State Tax - Franchise/Sales/Business",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 55,
+          "Type": "Child Support Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 54,
+          "Type": "Bankruptcy Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 26,
+          "Type": "Municipal - Other",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 6,
+          "Type": "COA Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 7,
+          "Type": "Code Enforcement Notice",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 12,
+          "Type": "Department of Justice (DOJ) Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 16,
+          "Type": "Federal Lien - Other",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 25,
+          "Type": "Multiple Indebtedness Mortgage",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 30,
+          "Type": "Municipal Receivership",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 56,
+          "Type": "CO Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 20,
+          "Type": "Homestead Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 39,
+          "Type": "Security Deed",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 46,
+          "Type": "Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 60,
+          "Type": "HOA Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 64,
+          "Type": "Other Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 24,
+          "Type": "MTAG/Tower Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 36,
+          "Type": "Property Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 58,
+          "Type": "Federal Deficiency Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 11,
+          "Type": "Demolition Notice/Violation/Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 35,
+          "Type": "Property Tax Foreclosure/Deed Application",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 4,
+          "Type": "Certificate of Sale",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 15,
+          "Type": "Federal Bond Notice",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 23,
+          "Type": "Mello-Roos Assessment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 33,
+          "Type": "Property Tax Agreement",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 17,
+          "Type": "Federal Restitution Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 29,
+          "Type": "Municipal Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 50,
+          "Type": "UCC Lien - Water Treatment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 51,
+          "Type": "Unsecured Property Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 8,
+          "Type": "Code Violation",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 61,
+          "Type": "Money/Deficiency Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 2,
+          "Type": "Association Foreclosure Action",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 32,
+          "Type": "Property Tax - Other",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 38,
+          "Type": "Property Tax Sale Certificate",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 44,
+          "Type": "State Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 45,
+          "Type": "Subrogated Municipal Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 48,
+          "Type": "UCC Lien - Co-Op",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 52,
+          "Type": "Utility Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 27,
+          "Type": "Municipal Assessment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 9,
+          "Type": "Collateral Mortgage",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 14,
+          "Type": "Federal Asset Forfeiture",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 59,
+          "Type": "Foreclosure Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 1,
+          "Type": "Association - Other",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 13,
+          "Type": "ECB Violations/Fine",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 47,
+          "Type": "UCC Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 63,
+          "Type": "Property Rights/Quiet Title Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 28,
+          "Type": "Municipal Dues",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 49,
+          "Type": "UCC Lien - Solar",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 53,
+          "Type": "Other Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 5,
+          "Type": "Child Support Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 10,
+          "Type": "Consolidated Mortgage",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 18,
+          "Type": "Federal Tax Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 22,
+          "Type": "Mechanics Lien - Work/Materials Pre-Date Subject",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 62,
+          "Type": "Municipal Judgment",
+          "TypeId": 2,
+          "Status": true
+        },
+        {
+          "Id": 21,
+          "Type": "Mechanics Lien",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 31,
+          "Type": "PACE/HERO/FIRST/WRGOG Assessment",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 34,
+          "Type": "Property Tax Deferral",
+          "TypeId": 1,
+          "Status": true
+        },
+        {
+          "Id": 37,
+          "Type": "Property Tax Mortgage",
+          "TypeId": 1,
+          "Status": true
+        }
+      ],
+      "PartyEntities": [
+        {
+          "Id": 3,
+          "Entity": "Corporate Owner",
+          "EntityStatus": true
+        },
+        {
+          "Id": 4,
+          "Entity": "Corporate Buyer",
+          "EntityStatus": true
+        },
+        {
+          "Id": 1,
+          "Entity": "Individual Owner",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Individual Buyer",
+          "EntityStatus": true
+        }
+      ],
+      "SecInstEntities": [
+        {
+          "Id": 6,
+          "Entity": "Modification of Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 11,
+          "Entity": "Notice of Trustee’s Sale",
+          "EntityStatus": true
+        },
+        {
+          "Id": 12,
+          "Entity": "HELOC",
+          "EntityStatus": true
+        },
+        {
+          "Id": 13,
+          "Entity": "Subject Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 1,
+          "Entity": "Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Deed of Trust",
+          "EntityStatus": true
+        },
+        {
+          "Id": 5,
+          "Entity": "Subordination",
+          "EntityStatus": true
+        },
+        {
+          "Id": 7,
+          "Entity": "Re-recorded Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 8,
+          "Entity": "Substitution of Trustee",
+          "EntityStatus": true
+        },
+        {
+          "Id": 9,
+          "Entity": "Amendment of Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 10,
+          "Entity": "Notice of Default",
+          "EntityStatus": true
+        },
+        {
+          "Id": 14,
+          "Entity": "Other Mortgage",
+          "EntityStatus": true
+        },
+        {
+          "Id": 3,
+          "Entity": "Security Deed",
+          "EntityStatus": true
+        },
+        {
+          "Id": 4,
+          "Entity": "Land Contract",
+          "EntityStatus": true
+        }
+      ],
+      "ERAEntities": [
+        {
+          "Id": 1,
+          "Entity": "Encumbrance",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Restriction",
+          "EntityStatus": true
+        },
+        {
+          "Id": 3,
+          "Entity": "Adverse Item",
+          "EntityStatus": true
+        }
+      ],
+      "TaxEntities": [
+        {
+          "Id": 1,
+          "Entity": "Annual Taxes",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Semi-Annual Taxes",
+          "EntityStatus": true
+        },
+        {
+          "Id": 3,
+          "Entity": "Quarterly Taxes",
+          "EntityStatus": true
+        },
+        {
+          "Id": 4,
+          "Entity": "Special Assessment",
+          "EntityStatus": true
+        }
+      ],
+      "ChainEntities": [
+        {
+          "Id": 4,
+          "Entity": "Leasehold Deed",
+          "EntityStatus": true
+        },
+        {
+          "Id": 1,
+          "Entity": "Deed",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Estate",
+          "EntityStatus": true
+        },
+        {
+          "Id": 3,
+          "Entity": "Deed- Survivorship",
+          "EntityStatus": true
+        }
+      ],
+      "LienEntities": [
+        {
+          "Id": 3,
+          "Entity": "Other",
+          "EntityStatus": true
+        },
+        {
+          "Id": 1,
+          "Entity": "Lien",
+          "EntityStatus": true
+        },
+        {
+          "Id": 2,
+          "Entity": "Judgement",
+          "EntityStatus": true
+        }
+      ],
+      "TaxAuthorityType": [
+        {
+          "Id": 4,
+          "Name": "County"
+        },
+        {
+          "Id": 5,
+          "Name": "City/Town"
+        },
+        {
+          "Id": 6,
+          "Name": "District"
+        },
+        {
+          "Id": 7,
+          "Name": "School District"
+        }
+      ],
+      "InterestTypes": [
+        {
+          "Id": 2,
+          "InterestTypeName": "Leasehold Estate"
+        },
+        {
+          "Id": 3,
+          "InterestTypeName": "Concurrent Estate"
+        },
+        {
+          "Id": 4,
+          "InterestTypeName": "Equitable Estate"
+        },
+        {
+          "Id": 1,
+          "InterestTypeName": "Fee Simple"
+        }
+      ]
+    },
+    "VersionData": {
+      "ID": 11028,
+      "SpID": 7574,
+      "SPVersion": {
+        "String": "1",
+        "Valid": true
+      },
+      "JsonData": {
+        "String": "{\"SPTaxes\": null, \"SPParties\": null, \"SPDocuments\": null, \"SPAssessments\": null, \"SearchPackage\": {\"ID\": 7574, \"PUD\": {\"Int64\": 0, \"Valid\": false}, \"Parcel\": {\"Valid\": false, \"String\": \"\"}, \"OrderID\": {\"Int64\": 384788, \"Valid\": true}, \"Registry\": {\"Int64\": 0, \"Valid\": false}, \"BuilderID\": {\"Valid\": false, \"String\": \"\"}, \"CTManualSort\": {\"Int64\": 0, \"Valid\": true}, \"ERManualSort\": {\"Int64\": 0, \"Valid\": true}, \"LJManualSort\": {\"Int64\": 0, \"Valid\": true}, \"SIManualSort\": {\"Int64\": 0, \"Valid\": true}, \"VDManualSort\": {\"Int64\": 0, \"Valid\": true}, \"InterestTypeID\": {\"Int64\": 0, \"Valid\": false}, \"IncludeDoesNotApply\": {\"Int64\": 0, \"Valid\": false}}, \"SPLienJudgement\": null, \"CommitmentTypings\": null, \"GlobalCommitments\": null, \"SPChainOfTitlesCT\": null, \"SPChainOfTitlesVD\": null, \"SPGeneralComments\": null, \"SPSecurityInstruments\": null, \"SPExceptionRestrictionAdverse\": null}",
+        "Valid": true
+      },
+      "JsonUpdatAt": {
+        "String": "2026-05-29 08:48:00",
+        "Valid": true
+      },
+      "ModifiedAt": {
+        "String": "2026-05-29 08:48:00",
+        "Valid": true
+      },
+      "CreatedAt": {
+        "String": "2026-05-20 09:32:33",
+        "Valid": true
+      },
+      "CreatedBy": {
+        "String": "f165cc9f-af78-4292-b476-2cbf142b043c",
+        "Valid": true
+      },
+      "ModifiedBy": {
+        "String": "4c96fd2b-ba23-4451-b1be-f55fac496e87",
+        "Valid": true
+      }
+    },
+    "owners": [],
+    "namesSearched": [],
+    "googleMapImage": "https://maps.googleapis.com/maps/api/staticmap?center=8990 Turkey Lake Road+ORANGE+FL&markers=|8990 Turkey Lake Road+ORANGE+FL&style=feature:poi|visibility:off&zoom=13&size=520x243&scale=2&sensor=false&key=AIzaSyBQxrh1ixO7oDDfGrBYxvpRkSoIl1RrNVk",
+    "googleMapImageSecond": "https://maps.googleapis.com/maps/api/staticmap?center=8990 Turkey Lake Road+ORANGE+FL&markers=|8990 Turkey Lake Road+ORANGE+FL&style=feature:poi|visibility:off&zoom=13&size=450x260&scale=2&sensor=false&key=AIzaSyBQxrh1ixO7oDDfGrBYxvpRkSoIl1RrNVk",
+    "searchDate": "05-29-2026",
+    "searchTime": "4:48 AM",
+    "estOrEdt": "EDT",
+    "effectiveDate": "N/A",
+    "effectiveTime": "N/A",
+    "searchStartDate": "N/A",
+    "priorEffectiveDate": "N/A",
+    "yrsSearch": "",
+    "footerTxt": "20-Year Search",
+    "Disclaimer": "This title search is based upon the review of recorded evidence from county records. This search excepts any defects, liens, encumbrances, adverse claims or other matters as a result of or caused by computer error, program error, programmer error, or programming limitations, including but not limited to any misspellings or name derivations when searching any county records automated system. This Title Search Report does not insure or guarantee the validity or sufficiency of any documents attached, nor is it to be considered a title insurance commitment and/or title insurance policy, an opinion of title, an ownership and encumbrance report, a guarantee of title or as any other form of guarantee or warranty of title and value of compensation for any inadequacies of the data is limited to the cost of the actual product.",
+    "AssetDir": "../assets",
+    "IncludeDoesNotApply": 0,
+    "logopath": "file:///Users/mokshchadha/rnd/go_rb/assets/Logo_Pippin.svg",
+    "pippinreport": "file:///Users/mokshchadha/rnd/go_rb/assets/pippin_report.svg",
+    "custlogo": "file:///Users/mokshchadha/rnd/go_rb/assets/Logo_Pippin.svg",
+    "buildingpath": "file:///Users/mokshchadha/rnd/go_rb/assets/PippinBuildings.svg",
+    "footerpath": "file:///Users/mokshchadha/rnd/go_rb/assets/footer2.svg",
+    "footerpathcust": "file:///Users/mokshchadha/rnd/go_rb/assets/footer_cust.svg",
+    "sealpath": "file:///Users/mokshchadha/rnd/go_rb/assets/Seal.svg",
+    "menLogo": "file:///Users/mokshchadha/rnd/go_rb/assets/images.jpeg",
+    "effectiveLogo": "file:///Users/mokshchadha/rnd/go_rb/assets/Pippin_Effective_Seal.svg"
+  },
+  "reportData": {
+    "File_ID": "gvb",
+    "Logo": "",
+    "Order_ID": 384788,
+    "Organization_ID": "7e9f0dfb-c662-4c20-889b-740e7748df69",
+    "Product_Description": "20-Year Search",
+    "Property_City": "Orlando",
+    "Property_County": "ORANGE",
+    "Property_State_Abbr": "FL",
+    "Report_Cover_Info": "",
+    "SP_DocInReport": 1,
+    "completeAddress": "8990 Turkey Lake Road\nOrlando, FL 32819"
+  },
+  "templatePath": "../templates/master_template/coverPageSave.html"
+}

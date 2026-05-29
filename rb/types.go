@@ -1,6 +1,25 @@
 package rb
 
-import "database/sql"
+import (
+	"database/sql"
+)
+
+// ---------------------------------------------------------------------------
+// Request / context
+// ---------------------------------------------------------------------------
+
+// CreateSearchPackageRequest mirrors the Express req object fields consumed by
+// the createSearchPackage flow.
+type CreateSearchPackageRequest struct {
+	OrderID     string
+	BuilderID   string
+	AdminUserID string
+	IsPreview   bool
+}
+
+// ---------------------------------------------------------------------------
+// Order_Property_User_View row
+// ---------------------------------------------------------------------------
 
 type OrderPropertyData struct {
 	AbstractorUserFirstName sql.NullString `db:"Abstractor_User_First_Name"`
@@ -143,7 +162,127 @@ type OrderPropertyData struct {
 	UserRole                sql.NullInt64  `db:"User_Role"`
 	UserStatus              sql.NullInt64  `db:"User_Status"`
 	YearsRequired           sql.NullInt64  `db:"Years_Required"`
+
+	// Derived/computed — populated after DB fetch or org query
+	CompleteAddress  string
+	ReportCoverInfo  sql.NullString
 }
+
+// ---------------------------------------------------------------------------
+// Report_Versions row
+// ---------------------------------------------------------------------------
+
+type ReportVersion struct {
+	ID          int            `db:"Id"`
+	SpID        int            `db:"Sp_Id"`
+	SPVersion   sql.NullString `db:"SP_Version"`
+	JsonData    sql.NullString `db:"Report_JSON"`
+	JsonUpdatAt sql.NullString `db:"Json_Update_At"`
+	ModifiedAt  sql.NullString `db:"Modified_At"`
+	CreatedAt   sql.NullString `db:"Created_At"`
+	CreatedBy   sql.NullString `db:"Created_By"`
+	ModifiedBy  sql.NullString `db:"Modified_By"`
+}
+
+// ---------------------------------------------------------------------------
+// Builder data — mirrors getBuilderData() return shape
+// ---------------------------------------------------------------------------
+
+type BuilderData struct {
+	SearchPackage                 SearchPackage
+	SPParties                     []SPParty
+	SPAssessments                 []map[string]any
+	SPTaxes                       []map[string]any
+	SPChainOfTitlesVD             []map[string]any
+	SPChainOfTitlesCT             []map[string]any
+	SPSecurityInstruments         []map[string]any
+	SPLienJudgement               []map[string]any
+	SPExceptionRestrictionAdverse []map[string]any
+	GlobalCommitments             []map[string]any
+	CommitmentTypings             []map[string]any
+	SPDocuments                   []map[string]any
+	SPGeneralComments             []map[string]any
+}
+
+// ---------------------------------------------------------------------------
+// Search_Packages (Report_Builder table) row
+// ---------------------------------------------------------------------------
+
+type SearchPackage struct {
+	ID                  int            `db:"Id"`
+	OrderID             sql.NullInt64  `db:"Order_ID"`
+	BuilderID           sql.NullString `db:"Builder_ID"`
+	VDManualSort        sql.NullInt64  `db:"VD_Manual_Sort"`
+	CTManualSort        sql.NullInt64  `db:"CT_Manual_Sort"`
+	SIManualSort        sql.NullInt64  `db:"SI_Manual_Sort"`
+	LJManualSort        sql.NullInt64  `db:"LJ_Manual_Sort"`
+	ERManualSort        sql.NullInt64  `db:"ER_Manual_Sort"`
+	PUD                 sql.NullInt64  `db:"PUD"`
+	Parcel              sql.NullString `db:"Parcel"`
+	Registry            sql.NullInt64  `db:"Registry"`
+	InterestTypeID      sql.NullInt64  `db:"Interest_Type_Id"`
+	IncludeDoesNotApply sql.NullInt64  `db:"Include_Does_Not_Apply"`
+}
+
+// ---------------------------------------------------------------------------
+// SP_Parties / Alias
+// ---------------------------------------------------------------------------
+
+type SPParty struct {
+	ID                int            `db:"Id"`
+	SpID              int            `db:"Sp_Id"`
+	EntityID          sql.NullInt64  `db:"Entity_ID"`
+	FirstBusinessName sql.NullString `db:"First_Business_Name"`
+	MiddleName        sql.NullString `db:"Middle_Name"`
+	LastName          sql.NullString `db:"Last_Name"`
+	Status            sql.NullInt64  `db:"Status"`
+	Applies           sql.NullInt64  `db:"Applies"`
+	Alias             []SPPartyAlias
+}
+
+type SPPartyAlias struct {
+	ID      int            `db:"Id"`
+	PartyID int            `db:"Party_ID"`
+	Alias   sql.NullString `db:"Alias"`
+	IsLegal sql.NullInt64  `db:"IsLegal"`
+	Status  sql.NullInt64  `db:"Status"`
+}
+
+// ---------------------------------------------------------------------------
+// Prep / lookup data — mirrors collectPrepData() + constructPayload()
+// ---------------------------------------------------------------------------
+
+type PrepData struct {
+	DocTypes      []DocumentType
+	TaxSources    []TaxType
+	TaxStatus     []TaxPaidStatus
+	ChainTypes    []ChainInstrumentType
+	LienTypes     []LienJudgementType
+	PartyEntities []PartyEntities
+
+	SecInstEntities []SecurityInstrumentsType
+	ERAEntities     []ERAEntities
+	TaxEntities     []TaxEntities
+	ChainEntities   []ChainOfTitleEntities
+	LienEntities    []LienJudgementEntities
+	TaxAuthorityType []TaxAuthorityType
+	InterestTypes   []PropertyInterestType
+}
+
+// ---------------------------------------------------------------------------
+// Top-level payload — mirrors the payload object built in createSearchPackage
+// ---------------------------------------------------------------------------
+
+type SearchPackagePayload struct {
+	OrderData   *OrderPropertyData
+	BuilderData *BuilderData
+	VersionData *ReportVersion
+	PrepData    *PrepData
+}
+
+// ---------------------------------------------------------------------------
+// Lookup entity types (used by getAllMaps / PrepData)
+// ---------------------------------------------------------------------------
 
 type DocumentType struct {
 	Id         int    `db:"Id"`
@@ -164,19 +303,19 @@ type TaxPaidStatus struct {
 }
 
 type RbSectionTypeMaps struct {
-	docTypesMap         map[int]DocumentType
-	taxSourcesMap       map[int]TaxType
-	taxPaidStatusMap    map[int]TaxPaidStatus
-	chainTypesMap       map[int]ChainInstrumentType
-	lienTypesMap        map[int]LienJudgementType
-	partyEntitiesMap    map[int]PartyEntities
-	secInstEntitiesMap  map[int]SecurityInstrumentsType
-	eraEntitiesMap      map[int]ERAEntities
-	taxEntitiesMap      map[int]TaxEntities
-	chainEntitiesMap    map[int]ChainOfTitleEntities
-	lienEntitesMap      map[int]LienJudgementEntities
-	taxAuthorityTypeMap map[int]TaxAuthorityType
-	interestTypeMap     map[int]PropertyInterestType
+	DocTypesMap         map[int]DocumentType
+	TaxSourcesMap       map[int]TaxType
+	TaxPaidStatusMap    map[int]TaxPaidStatus
+	ChainTypesMap       map[int]ChainInstrumentType
+	LienTypesMap        map[int]LienJudgementType
+	PartyEntitiesMap    map[int]PartyEntities
+	SecInstEntitiesMap  map[int]SecurityInstrumentsType
+	ERAEntitiesMap      map[int]ERAEntities
+	TaxEntitiesMap      map[int]TaxEntities
+	ChainEntitiesMap    map[int]ChainOfTitleEntities
+	LienEntitiesMap     map[int]LienJudgementEntities
+	TaxAuthorityTypeMap map[int]TaxAuthorityType
+	InterestTypeMap     map[int]PropertyInterestType
 }
 
 type ChainInstrumentType struct {
@@ -237,4 +376,81 @@ type TaxAuthorityType struct {
 type PropertyInterestType struct {
 	Id               int    `db:"Id"`
 	InterestTypeName string `db:"Interest_Type_Name"`
+}
+
+// ---------------------------------------------------------------------------
+// Optimized / curated report — output of optimizeReportData()
+// Mirrors the finalizedData object assembled by finalizeData() in package_helper.js
+// ---------------------------------------------------------------------------
+
+// OptimizedReport is the fully cleansed, display-ready report structure.
+type OptimizedReport struct {
+	PropertyDetails     map[string]any   `json:"Property_Details"`
+	ReportDetails       map[string]any   `json:"ReportDetails"` // same reference as PropertyDetails (JS does this too)
+	SearchParties       []map[string]any `json:"Search_Parties"`
+	Assessments         []map[string]any `json:"Assessments"`
+	Taxes               []map[string]any `json:"Taxes"`
+	VestingDeed         []map[string]any `json:"Vesting_Deed"`
+	ChainOfTitle        []map[string]any `json:"Chain_Of_Title"`
+	SecurityInstruments []map[string]any `json:"Security_Instruments"`
+	LienAndJudgement    []map[string]any `json:"LienAndJudgement"`
+	ERA                 []map[string]any `json:"ERA"`
+	GeneralComments     []map[string]any `json:"General_Comments"`
+	ReportChanges       []string         `json:"reportChanges"`
+	SPVersion           any              `json:"SP_Version"`
+}
+
+// ReportPayload is the full data bag passed into generateHTMLTemplate.
+// It mirrors the combination of `payload` + template-helper fields set by
+// generateHTMLTemplate in pdf_helper.js.
+type ReportPayload struct {
+	Report      OptimizedReport    `json:"Report"`
+	OrderData   *OrderPropertyData `json:"OrderData"`
+	BuilderData *BuilderData       `json:"BuilderData"`
+	PrepData    *PrepData          `json:"PrepData"`
+	VersionData *ReportVersion     `json:"VersionData"`
+
+	// Template helpers (populated by generateHTMLTemplate)
+	Owners             []string            `json:"owners"`
+	NamesSearched      []NamesSearchedItem `json:"namesSearched"`
+	GoogleMapImage     string              `json:"googleMapImage"`
+	GoogleMapImageSecond string            `json:"googleMapImageSecond"`
+	SearchDate         string              `json:"searchDate"`
+	SearchTime         string              `json:"searchTime"`
+	EstOrEdt           string              `json:"estOrEdt"`
+	EffectiveDate      string              `json:"effectiveDate"`
+	EffectiveTime      string              `json:"effectiveTime"`
+	SearchStartDate    string              `json:"searchStartDate"`
+	PriorEffectiveDate string              `json:"priorEffectiveDate"`
+	YrsSearch          any                 `json:"yrsSearch"`
+	FooterTxt          string              `json:"footerTxt"`
+	Disclaimer         string              `json:"Disclaimer"`
+	AssetDir           string              `json:"AssetDir"`
+	IncludeDoesNotApply int                `json:"IncludeDoesNotApply"`
+
+	// Asset paths (needed by templates)
+	LogoPath       string `json:"logopath"`
+	PippinReport   string `json:"pippinreport"`
+	CustLogo       string `json:"custlogo"`
+	BuildingPath   string `json:"buildingpath"`
+	FooterPath     string `json:"footerpath"`
+	FooterPathCust string `json:"footerpathcust"`
+	SealPath       string `json:"sealpath"`
+	MenLogo        string `json:"menLogo"`
+	EffectiveLogo  string `json:"effectiveLogo"`
+}
+
+// NamesSearchedItem mirrors the objects pushed into namesSearchedList in pdf_helper.js.
+type NamesSearchedItem struct {
+	Name      string
+	JudgLabel string
+	LienLabel string
+	Judgments int
+	Liens     int
+}
+
+// SortedDoc mirrors the { path, idx } object in getSortedDocList() (package_helper.js).
+type SortedDoc struct {
+	Path map[string]any
+	Idx  int
 }
